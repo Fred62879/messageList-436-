@@ -1,0 +1,45 @@
+let messages = JSON.stringify({ messages: [ "Hi there!", "Hi"] });
+
+ini();
+
+let form = document.getElementById("messform");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+
+// create list element
+function create(mess) {
+    let node = document.createElement("LI");
+    let textnode = document.createTextNode(mess);
+    node.appendChild(textnode);
+    return node;
+}
+
+// add pre stored messages
+function ini() {
+    let messlist = document.getElementById("messages");
+    JSON.parse(messages).messages.forEach((message) => {
+	messlist.appendChild(create(message));
+    });
+}
+
+// add new message
+function add() {
+    let newmess = document.getElementById("newmess").value;
+    let messlist = document.getElementById("messages");
+    messlist.appendChild(create(newmess));
+}
+
+// clear message form
+function empty() {
+    document.getElementById("messform").reset();
+}
+
+function display() {
+    let messarea = document.getElementById("messages");
+    messarea.style.display = "block";
+}
+
+function hide() {
+    let messarea = document.getElementById("messages");
+    messarea.style.display = "none";
+}

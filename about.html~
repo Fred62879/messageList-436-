@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" type="text/css" href="ml.css">
+  <script src="ml.js"></script>
+
+   <body>
+    <div class="container">
+      <ul class="nav">
+	<li><a href="message.html">Message</a></li>
+	<li><a href="about.html">About</a></li>
+      </ul>
+      
+      
+      
+    </div>
+  </body>
+  
+  <p>This is the about page</p>
+</html>

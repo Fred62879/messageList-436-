@@ -1,0 +1,181 @@
+.nav {
+  background-color: #D6EFFF;
+  overflow: hidden;
+  width: 100vw
+}
+
+/* Style the links inside the navigation bar */
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+#container-div {
+    font-family: Arial, sans-serif;
+}
+
+span {
+    background-color: #98FB98;
+    font-size: 3rem;
+}
+
+img {
+    position: relative;
+    z-index: 1;
+}
+
+#vertical  {
+    background-color: blue;
+    color: #FFFFFF;
+}
+
+#horizontal {
+    background-color: yellow;
+}
+
+.button_stuff {
+    position: relative;
+    z-index: 2;
+}
+
+
+function showAbout() {
+    let aboutTab = document.getElementsByClassName("about")[0];
+    if (aboutTab.style.display === "") {
+	aboutTab.style.display = "block";
+	let messageTab = document.getElementsByClassName("message")[0];
+	messageTab.style.display = "";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let messages = JSON.stringify({ messages: [ "Hi there!", "Hi"] });
+
+// ini();
+
+// create list element
+function create(mess) {
+    let node = document.createElement("LI");
+    let textnode = document.createTextNode(mess);
+    node.appendChild(textnode);
+    return node;
+}
+
+// add pre stored messages
+function ini() {
+    let messlist = document.getElementById("messages");
+    JSON.parse(messages).messages.forEach((message) => {
+	messlist.appendChild(create(message));
+    });
+}
+
+// add new message
+function add() {
+    let newmess = document.getElementById("newmess").value;
+    let messlist = document.getElementById("messages");
+    console.log(newmess);
+    console.log(messlist);
+    messlist.appendChild(create(newmess));
+    console.log(messlist);
+}
+
+function display() {
+    let messarea = document.getElementById("messages");
+    messarea.style.display = "block";
+}
+
+function hide() {
+    let messarea = document.getElementById("messarea");
+    messarea.style.display = "none";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* nav bar styling
+   ref: https://itnext.io/how-to-create-a-responsive-navigation-bar-with-html-css-and-jquery-step-by-step-tutorial-9c780b58479f
+*/
+nav{
+    width: 80vw;
+    background-color: #D6EFFF;
+}
+
+nav ul {
+  margin: 0;
+  /* padding-left: 10vw;
+  padding-right: 10vw; */
+  display: flex;
+  justify-content: space-evenly
+}
+
+nav li {
+    list-style-type: none;
+    /* margin: 0 5vw; */
+    font-size: 3vh
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    /* padding: 2vw; */
+    font-family: monospace;
+}
+
+.about {@media only screen and (max-width: 500px) {
+  /*shows elements in a column*/
+  nav ul { flex-direction: column; }
+  
+  /* deletes margin on top or bottom of the a tag*/
+  nav li { margin: 0; }
+ /* makes sure that the a tag will take the entire screen*/
+  a { display: block; }
+}
+    display: none;
+}
