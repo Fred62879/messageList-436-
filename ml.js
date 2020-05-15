@@ -13,6 +13,7 @@ function create(mess) {
     node.appendChild(textnode);
     node.id = "message";
     node.style.cssText = "font-size: 1em; display: none; float: left; margin: 0 0";
+    
     return node;
 }
 

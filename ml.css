@@ -186,6 +186,8 @@ h4 {
     margin: 10vh auto;
     padding: 2em;
     font-size: 2em;
+    color: white;
+    background-color: #bdcebe;
 }
 
 @media all and (max-width: 600px) {
